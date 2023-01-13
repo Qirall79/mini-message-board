@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  a(href="/new", id="new-link") New message
+  ul 
+    each message in messages
+      li "#{message.text}" by #{message.user} at #{message.added}
